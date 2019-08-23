@@ -9,7 +9,7 @@ def encryption():
     message_to_encrypt = input("Enter the message to encrypt.")
     num = int(input("Enter the number of positions to move"))
     for i in range(len(message_to_encrypt)):
-        sign = chr((ord(message_to_encrypt[i])+num))
+        sign = chr(((ord(message_to_encrypt[i])+num)%25))
         message_encrypted = message_encrypted + sign
     print(message_encrypted)
 
